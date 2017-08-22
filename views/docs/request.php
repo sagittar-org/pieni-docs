@@ -1,6 +1,6 @@
 <h3>リクエスト</h3>
 <p>
-<code>./.htaccess</code>の指示により<code>./direct</code>から始まらないリクエストは<code>./index.php</code>によって処理されます。<br>
+<code>./.htaccess</code>の指示により<code>./direct</code>から始まらないリクエストは全て<code>./index.php</code>によって処理されます。<br>
 </p>
 
 <h3>パッケージ</h3>
