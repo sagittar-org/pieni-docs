@@ -27,7 +27,7 @@ class Docs extends Controller {
 			{
 				continue;
 			}
-			if (in_array($file, ['contents.php', 'search.php']))
+			if (in_array($file, ['contents.php', 'page.php', 'search.php']))
 			{
 				continue;
 			}
