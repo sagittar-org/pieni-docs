@@ -7,6 +7,6 @@
     </span>
   </div>
 </form>
-<?php foreach (['index', 'package', 'request', 'model', 'helper', 'view', 'auth'] as $file): ?>
+<?php foreach (['index', 'request', 'package', 'model', 'helper', 'view', 'auth'] as $file): ?>
 <h4><a href="<?php href("docs/page/{$file}"); ?>"><?php h(strip_tags(file("vendor/sagittar-org/pieni-docs/views/docs/{$file}.php")[0])) ?></a></h4>
 <?php endforeach; ?>

@@ -30,5 +30,5 @@ cp vendor/sagittar-org/pieni/index.php .
 <p>
 簡潔なトップページが表示されました。<br>
 通常はここからアプリケーション開発を始めます。<br>
-初めてpieniを使うならば<a href="<?php href('docs/page/package'); ?>">パッケージ</a>についても読んでください。<br>
+初めてpieniを使うならば<a href="<?php href('docs/page/request'); ?>">リクエストの流れ</a>と<a href="<?php href('docs/page/package'); ?>">パッケージ</a>についても読んでください。<br>
 </p>

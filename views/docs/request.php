@@ -1,4 +1,4 @@
-<h3>リクエスト</h3>
+<h3>リクエストの流れ</h3>
 <p>
 <code>./.htaccess</code>の指示により<code>./direct</code>から始まらないリクエストは全て<code>./index.php</code>によって処理されます。<br>
 </p>
@@ -39,7 +39,7 @@ Array
 <h3>コントローラのロード</h3>
 <p>
 検索バスから<code>uri('class')</code>に対応するコントローラをロードします。<br>
-<code>uri('class')</code>が<code>table_list</code>に含まれる場合、コントローラ<code>Crud</code>も検索パスに含まれます。<br>
+<code>uri('class')</code>が<code>table_list</code>に含まれる場合、コントローラ<code>Crud</code>もフォールバックパスに含まれます。<br>
 これは独自のビジネスロジックがない場合、コントローラが不要であることを意味します。<br>
 </p>
 
