@@ -3,7 +3,7 @@ $file_list = ['index', 'package', 'request', 'model', 'helper', 'view', 'auth'];
 $prev = FALSE;
 for ($file = current($file_list); $file !== FALSE; $file = next($file_list))
 {
-	if ($file === uri('param_arr')[0])
+	if ( ! isset(uri('param_arr')[0]) OR $file === uri('param_arr')[0])
 	{
 		break;
 	}

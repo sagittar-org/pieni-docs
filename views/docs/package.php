@@ -6,20 +6,19 @@ composer require sagittar-org/pieni-website:dev-master
 cp vendor/sagittar-org/pieni-website/index.php .
 </pre>
 <p>
-pieniのWebサイトが表示されました。<br>
-なぜでしょう。<br>
+<code>./index.php</code>の<code>package_list</code>へWebサイトパッケージが追加されたため、Webサイトパッケージは検索パスへ含まれ、pieniのWebサイトが表示されます。<br>
+<code>./config.php</code>の<code>language_list</code>に複数の言語が指定され、言語選択が可能になります。<br>
+まだユーザガイドは表示されません。<br>
 </p>
 
 <h4>ユーザガイドパッケージの追加</h4>
-まだユーザガイドは表示されません。<br>
 ユーザガイドパッケージを組み込んでみましょう。<br>
 <pre>
 composer require sagittar-org/pieni-docs:dev-master
 cp vendor/sagittar-org/pieni-docs/index.php .
 </pre>
 <p>
-ユーザガイドが表示されるようになりました。<br>
-なぜでしょう。<br>
+<code>./index.php</code>の<code>package_list</code>へユーザガイドパッケージが追加されたため、ビューファイルがユーザガイドが表示されます。<br>
 </p>
 
 <h4>フォーラムパッケージの追加</h4>
