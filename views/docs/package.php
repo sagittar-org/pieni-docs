@@ -24,7 +24,7 @@ cp vendor/sagittar-org/pieni-docs/index.php .
 
 <h4>フォーラムパッケージの追加</h4>
 まだフォーラムは表示されません。<br>
-フォーラムを組み込んでみましょう。<br>
+フォーラムパッケージを組み込んでみましょう。<br>
 <pre>
 composer require sagittar-org/pieni-forum:dev-master
 cp vendor/sagittar-org/pieni-forum/index.php .

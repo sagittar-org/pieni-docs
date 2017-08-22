@@ -7,6 +7,7 @@
     </span>
   </div>
 </form>
+<h4><a href="<?php href('docs'); ?>">pieniについて</a></h4>
 <h4><a href="<?php href('docs/page/package'); ?>">パッケージ</a></h4>
 <h4><a href="<?php href('docs/page/request'); ?>">リクエスト</a></h4>
 <h4><a href="<?php href('docs/page/model'); ?>">モデル</a></h4>
