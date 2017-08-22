@@ -32,3 +32,15 @@ cp vendor/sagittar-org/pieni-website/index.php .
 pieniのWebサイトが表示されました。<br>
 なぜでしょう。<br>
 </p>
+
+<h3>3. パッケージの追加</h3>
+ユーザガイドページは表示されません。<br>
+ユーザガイドパッケージを組み込んでみましょう。<br>
+<pre>
+composer require sagittar-org/pieni-docs:dev-master
+cp vendor/sagittar-org/pieni-docs/index.php .
+</pre>
+<p>
+ユーザガイドｇ表示されるようになりました。<br>
+なぜでしょう。<br>
+</p>
