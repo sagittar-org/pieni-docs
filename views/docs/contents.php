@@ -7,10 +7,6 @@
     </span>
   </div>
 </form>
-<h4><a href="<?php href('docs'); ?>">pieniについて</a></h4>
-<h4><a href="<?php href('docs/page/package'); ?>">パッケージ</a></h4>
-<h4><a href="<?php href('docs/page/request'); ?>">リクエスト</a></h4>
-<h4><a href="<?php href('docs/page/model'); ?>">モデル</a></h4>
-<h4><a href="<?php href('docs/page/helper'); ?>">ヘルパー</a></h4>
-<h4><a href="<?php href('docs/page/view'); ?>">ビュー</a></h4>
-<h4><a href="<?php href('docs/page/auth'); ?>">認証</a></h4>
+<?php foreach (['index', 'package', 'request', 'model', 'helper', 'view', 'auth'] as $file): ?>
+<h4><a href="<?php href("docs/page/{$file}"); ?>"><?php h(strip_tags(file("vendor/sagittar-org/pieni-docs/views/docs/{$file}.php")[0])) ?></a></h4>
+<?php endforeach; ?>
