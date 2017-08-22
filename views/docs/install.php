@@ -10,12 +10,25 @@
 </table>
 
 <h3>インストール</h3>
+<h3>1. 最小構成のセットアップ</h3>
 <pre>
 composer require sagittar-org/pieni:dev-master
-cp vendor/sagittar-org/pieni/index.php .
 cp vendor/sagittar-org/pieni/.htaccess .
+cp vendor/sagittar-org/pieni/index.php .
 </pre>
-<p>フォーラムのデモを動かすには:</p>
+<p>
+簡潔なトップページが表示されました。<br>
+通常はここからアプリケーション開発を始めます。<br>
+自分が何をするべきなのかわかっているならこの先を読む必要はありません。<br>
+</p>
+
+<h3>2. パッケージの追加</h3>
+パッケージの理解のためにpieniのWebサイトのパッケージを組み込んでみましょう。
 <pre>
-mysql < vendor/sagittar-org/pieni/misc/pieni.dump 
+composer require sagittar-org/pieni-website:dev-master
+cp vendor/sagittar-org/pieni-website/index.php .
 </pre>
+<p>
+pieniのWebサイトが表示されました。<br>
+なぜでしょう。<br>
+</p>
