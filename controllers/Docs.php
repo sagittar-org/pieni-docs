@@ -21,9 +21,9 @@ class Docs extends Controller {
 			redirect('docs/search');
 		}
 		$vars = [];
-		foreach (scandir('views/docs') as $file)
+		foreach (scandir('vendor/sagittar-org/pieni-docs/views/docs') as $file)
 		{
-			if ( ! is_file("views/docs/{$file}"))
+			if ( ! is_file("vendor/sagittar-org/pieni-docs/views/docs/{$file}"))
 			{
 				continue;
 			}
@@ -31,7 +31,7 @@ class Docs extends Controller {
 			{
 				continue;
 			}
-			$grep = shell_exec("grep '{$_SESSION[uri('actor')]['docs']['search']}' views/docs/{$file}");
+			$grep = shell_exec("grep '{$_SESSION[uri('actor')]['docs']['search']}' vendor/sagittar-org/pieni-docs/views/docs/{$file}");
 			if ($grep === NULL)
 			{
 				continue;
@@ -39,7 +39,7 @@ class Docs extends Controller {
 			$grep = preg_replace('/<\?php[^>]*\?>/', '', $grep);
 			$grep = strip_tags($grep);
 			$vars[] = [
-				'cmd' => "grep '{$_SESSION[uri('actor')]['docs']['search']}' views/docs/{$file}",
+				'cmd' => "grep '{$_SESSION[uri('actor')]['docs']['search']}' vendor/sagittar-org/pieni-docs/views/docs/{$file}",
 				'file' => preg_replace('/\.php$/', '', $file),
 				'grep' => h($grep, TRUE),
 			];
