@@ -22,7 +22,7 @@ cp vendor/sagittar-org/pieni/index.php .
 自分が何をするべきなのかわかっているならこの先を読む必要はありません。<br>
 </p>
 
-<h3>2. パッケージの追加</h3>
+<h3>2. Webサイトパッケージの追加</h3>
 パッケージの理解のためにpieniのWebサイトのパッケージを組み込んでみましょう。
 <pre>
 composer require sagittar-org/pieni-website:dev-master
@@ -33,7 +33,7 @@ pieniのWebサイトが表示されました。<br>
 なぜでしょう。<br>
 </p>
 
-<h3>3. パッケージの追加</h3>
+<h3>3. ユーザガイドパッケージの追加</h3>
 まだユーザガイドは表示されません。<br>
 ユーザガイドパッケージを組み込んでみましょう。<br>
 <pre>
@@ -42,5 +42,17 @@ cp vendor/sagittar-org/pieni-docs/index.php .
 </pre>
 <p>
 ユーザガイドが表示されるようになりました。<br>
+なぜでしょう。<br>
+</p>
+
+<h3>4. フーラムパッケージの追加</h3>
+まだフーラムは表示されません。<br>
+フーラムを組み込んでみましょう。<br>
+<pre>
+composer require sagittar-org/pieni-forum:dev-master
+cp vendor/sagittar-org/pieni-forum/index.php .
+</pre>
+<p>
+フーラムが表示されるようになりました。<br>
 なぜでしょう。<br>
 </p>
