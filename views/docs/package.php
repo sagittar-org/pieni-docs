@@ -28,6 +28,7 @@ cp vendor/sagittar-org/pieni-docs/index.php .
 <pre>
 composer require sagittar-org/pieni-forum:dev-master
 cp vendor/sagittar-org/pieni-forum/index.php .
+mysql < vendor/sagittar-org/pieni-forum/misc/pieni-forum.dump
 </pre>
 <p>
 フォーラムが表示されるようになりました。<br>
