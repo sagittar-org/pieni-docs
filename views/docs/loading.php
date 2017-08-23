@@ -17,7 +17,7 @@ $paths = [
 	[uri('actor'), ''],
 	in_array($class, config('uri')['table_list']) ? [$class, 'crud', ''] : [$class, ''],
 ];
-fallback2("index.php", 'views', $paths);
+fallback2("Post_model.php", 'models');
 ?>
 <p>
 例では以下の条件を仮定します。
@@ -43,6 +43,10 @@ fallback2("index.php", 'views', $paths);
 <td>welcome</td>
 </tr>
 </table>
+<p>
+<code>package_list</code>は常にフォールバックパスの最上位に位置します。<br>
+ローディング関数によっては独自のフォールバックパスが存在します。<br>
+</p>
 
 <h4>ビューのロード</h4>
 <p>
@@ -105,4 +109,18 @@ load_template('index');
 テンプレートでのビューのローディング
 <pre>
 &lt;?php load_view($view, $vars, $class); ?&gt;
+</pre>
+
+<h4>モデルのロード</h4>
+<p>
+モデルには独自のフォールバックパスはありません。<br>
+</p>
+ロードの指示
+<pre>
+load_model('post');
+</pre>
+展開後のフォールバックパス
+<pre>
+/models//Post_model.php
+/vendor/sagittar-org/pieni/models//Post_model.php
 </pre>
