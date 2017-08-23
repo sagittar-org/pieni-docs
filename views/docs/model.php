@@ -1,109 +1,87 @@
 <h2>モデル</h2>
-<h3>プロパティ</h3>
-<table class="table">
-<tr>
-  <th>プロパティ名</th>
-  <th>説明</th>
-  <th>デフォルト値</th>
-</tr>
-<tr>
-  <td>actor</td>
-  <td>アクター</td>
-  <td>$params['actor']</td>
-</tr>
-<tr>
-  <td>table</td>
-  <td>テーブル</td>
-  <td>$params['class']</td>
-</tr>
-<tr>
-  <td>alias</td>
-  <td>エイリアス</td>
-  <td>$params['alias']</td>
-</tr>
-<tr>
-  <td>action</td>
-  <td>アクション</td>
-  <td>$params['method']</td>
-</tr>
-<tr>
-  <td>parent_id</td>
-  <td>親エンティティID</td>
-  <td>$params['parent_id']</td>
-</tr>
-<tr>
-  <td>session</td>
-  <td>indexのセッション</td>
-  <td>isset($params['session']) ? $params['session'] : []</td>
-</tr>
-<tr>
-  <td>primary_key</td>
-  <td>主キー</td>
-  <td>"{$this->table}_id"</td>
-</tr>
-<tr>
-  <td>has_hash</td>
-  <td>1:nアソシエーション</td>
-  <td>[]</td>
-</tr>
-<tr>
-  <td>action_hash</td>
-  <td>CRUDアクション</td>
-  <td>['index', 'view', 'add', 'edit', 'delete']</td>
-</tr>
-<tr>
-  <td>select_hash</td>
-  <td>SELECT列</td>
-  <td>["{$this->table}_id" => NULL, "{$this->table}_name" => NULL]</td>
-</tr>
-<tr>
-  <td>join_hash</td>
-  <td>LEFT JOIN</td>
-  <td>[]</td>
-</tr>
-<tr>
-  <td>set_list</td>
-  <td>INSERT/UPDATE列</td>
-  <td>["{$this->table}_name"]</td>
-</tr>
-<tr>
-  <td>fixed_hash</td>
-  <td>INSERETでの固定値</td>
-  <td>[]</td>
-</tr>
-<tr>
-  <td>where_list</td>
-  <td>固定のWHERE</td>
-  <td>[]</td>
-</tr>
-<tr>
-  <td>where_hash</td>
-  <td>POSTによるWHERE</td>
-  <td>[]</td>
-</tr>
-<tr>
-  <td>order_by_hash</td>
-  <td>ORDER BY選択肢</td>
-  <td>["{$this->primary_key}_asc" => "{$this-&gt;primary_key} ASC", "{$this->primary_key}_desc" => "{$this-&gt;primary_key} DESC"]</td>
-</tr>
-<tr>
-  <td>limit_list</td>
-  <td>LIMIT選択肢</td>
-  <td>[10]</td>
-</tr>
-<tr>
-  <td>display</td>
-  <td>ヘッダなどに使用するフィールド</td>
-  <td>"{$this->table}_name"</td>
-</tr>
-<tr>
-  <td>hidden_list</td>
-  <td>取得するが表示しない</td>
-  <td>[$this->primary_key]</td>
-</tr>
-<tr>
-  <td>use_card</td>
-  <td>一覧をカード形式で表示する</td>
-  <td>FALSE</td>
-</tr>
-</table>
+<p>
+モデルはpieniの心臓部です。<br>
+プロパティへの指示で、コントローラでのリクエスト制限や、ビューでの操作ボタンの表示などが行えます。<br>
+<code>_hash</code>で終わるプロパティは連想配列、<code>_list</code>で終わるプロパティは添字配列、それ以外はスカラーで値を指定します。<br>
+<?php $property_list = ['primary_key', 'display', 'use_card', 'has_hash', 'action_hash', 'select_hash', 'hidden_list', 'set_list', 'fixed_hash', 'success_hash', 'join_hash', 'where_list', 'where_hash', 'order_by_hash', 'limit_list']; ?>
+<ul>
+<?php foreach ($property_list as $property): ?>
+<li><a href="#<?php h($property); ?>"><?php h($property); ?></a> - <?php l($property); ?></li>
+<?php endforeach; ?>
+</ul>
+</p>
+
+<h3 id="primary_key"><?php l('primary_key'); ?></h3>
+<p>
+<code>view</code>、<code>edit</code>、<code>delete</code>などで使用する主キーのフィールド名を指定します。<br>
+</p>
+
+<h3 id="display"><?php l('display'); ?></h3>
+<p>
+<code>view</code>のヘッダなどで使用する行のタイトルを示すフィールド名を指定します。<br>
+</p>
+
+<h3 id="use_card"><?php l('use_card'); ?></h3>
+<p>
+<code>TRUE</code>を指定すると、<code>index</code>で表形式のかわりにカード形式で結果行を表示します。<br>
+</p>
+
+<h3 id="has_hash"><?php l('has_hash'); ?></h3>
+<p>
+<code>view</code>で表示する子エンティティ一覧がある場合に指定します。<br>
+</p>
+
+<h3 id="action_hash"><?php l('action_hash'); ?></h3>
+<p>
+許可するアクションを指定します。<br>
+</p>
+
+<h3 id="select_hash"><?php l('select_hash'); ?></h3>
+<p>
+取得するフィールドを指定します。<br>
+</p>
+
+<h3 id="hidden_list"><?php l('hidden_hash'); ?></h3>
+<p>
+標準のビューでは表示しないフィールドを指定します。<br>
+</p>
+
+<h3 id="set_list"><?php l('set_list'); ?></h3>
+<p>
+更新するフィールドを指定します。<br>
+</p>
+
+<h3 id="fixed_hash"><?php l('fixed_hash'); ?></h3>
+<p>
+認証済みのアクターIDや現在日時など、<code>add</code>での固定値を指定します。<br>
+</p>
+
+<h3 id="success_hash"><?php l('success_hash'); ?></h3>
+<p>
+更新成功時のリダイレクト先を変更したい場合に指定します。<br>
+</p>
+
+<h3 id="join_hash"><?php l('join_hash'); ?></h3>
+<p>
+左外部結合を指定します。<br>
+</p>
+
+<h3 id="where_list"><?php l('where_list'); ?></h3>
+<p>
+固定の検索条件を指定します。<br>
+</p>
+
+<h3 id="where_hash"><?php l('where_hash'); ?></h3>
+<p>
+リクエストによる検索条件を指定します。<br>
+</p>
+
+<h3 id="order_by_hash"><?php l('order_by_hash'); ?></h3>
+<p>
+ソート条件を指定します。<br>
+</p>
+
+<h3 id="limit_list"><?php l('limit_list'); ?></h3>
+<p>
+表示件数を指定します。<br>
+</p>
