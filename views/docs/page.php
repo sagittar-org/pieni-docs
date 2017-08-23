@@ -1,5 +1,5 @@
 <?php
-$file_list = ['index', 'request', 'package', 'model', 'helper', 'view', 'auth'];
+$file_list = ['index', 'request', 'loading', 'package', 'model', 'helper', 'view', 'auth'];
 $prev = FALSE;
 for ($file = current($file_list); $file !== FALSE; $file = next($file_list))
 {

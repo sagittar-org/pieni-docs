@@ -32,6 +32,4 @@ mysql < vendor/sagittar-org/pieni-forum/misc/pieni-forum.dump
 <p>
 <code>./index.php</code>の<code>package_list</code>へフォーラムパッケージが追加されたため、フォーラムが表示されます。<br>
 <code>./config.php</code>にアクターや認証の記述があるため、ログインなどが可能になります。
-<code>./index.php</code>
-
 </p>
