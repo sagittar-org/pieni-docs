@@ -1,4 +1,4 @@
-<h3>リクエストの流れ</h3>
+<h2>リクエストの流れ</h2>
 <p>
 <code>./.htaccess</code>の指示により<code>./direct</code>から始まらないリクエストは全て<code>./index.php</code>によって処理されます。<br>
 </p>

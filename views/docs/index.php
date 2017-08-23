@@ -1,4 +1,8 @@
-<h3>pieniについて</h3>
+<h2>pieniについて</h2>
+<div class="alert alert-success" role="alert">
+Transration <a href="https://github.com/sagittar-org/pieni-docs">pull requests</a> are welcome.
+<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+</div>
 <p>
 pieniはLAMP環境で動作するPHPフレームワークです。<br>
 CodeIgniterの影響を大きく受けています。<br>
@@ -14,7 +18,7 @@ CRUDと認証機能が含まれます。<br>
 <tr><th>Apacheモジュール</th><td>rewrite</td></tr>
 <tr><th>DBサーバ</th><td>MySQL ^5</td></tr>
 <tr><th>プログラミング言語</th><td>PHP ^5 | ^7</td></tr>
-<tr><th>PHPモジュール</th><td>gd, mysqli</td></tr>
+<tr><th>PHPモジュール</th><td>mysqli, gd</td></tr>
 <tr><th>その他</th><td>Composer, 基本的なUnixコマンド</td></tr>
 </table>
 
@@ -30,5 +34,5 @@ cp vendor/sagittar-org/pieni/index.php .
 <p>
 簡潔なトップページが表示されました。<br>
 通常はここからアプリケーション開発を始めます。<br>
-初めてpieniを使うならば<a href="<?php href('docs/page/request'); ?>">リクエストの流れ</a>と<a href="<?php href('docs/page/package'); ?>">パッケージ</a>についても読んでください。<br>
+初めてpieniを使うならば<a href="<?php href('docs/page/request'); ?>">リクエストの流れ</a>、<a href="<?php href('docs/page/loading'); ?>">ローディング</a>、<a href="<?php href('docs/page/package'); ?>">パッケージ</a>についても読んでください。<br>
 </p>

@@ -1,5 +1,5 @@
-<h3>パッケージ</h3>
-<h4>Webサイトパッケージの追加</h4>
+<h2>パッケージ</h2>
+<h3>Webサイトパッケージの追加</h3>
 パッケージの理解のためにpieniのWebサイトのパッケージを組み込んでみましょう。
 <pre>
 composer require sagittar-org/pieni-website:dev-master
@@ -11,7 +11,7 @@ cp vendor/sagittar-org/pieni-website/index.php .
 まだユーザガイドは表示されません。<br>
 </p>
 
-<h4>ユーザガイドパッケージの追加</h4>
+<h3>ユーザガイドパッケージの追加</h3>
 ユーザガイドパッケージを組み込んでみましょう。<br>
 <pre>
 composer require sagittar-org/pieni-docs:dev-master
@@ -22,7 +22,7 @@ cp vendor/sagittar-org/pieni-docs/index.php .
 まだフォーラムは表示されません。<br>
 </p>
 
-<h4>フォーラムパッケージの追加</h4>
+<h3>フォーラムパッケージの追加</h3>
 フォーラムパッケージを組み込んでみましょう。<br>
 <pre>
 composer require sagittar-org/pieni-forum:dev-master

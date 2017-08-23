@@ -1,4 +1,4 @@
-<h2>vendor/sagittar-org/pieni/<?php h(implode('/', uri('param_arr'))); ?></h2>
+<h3>vendor/sagittar-org/pieni/<?php h(implode('/', uri('param_arr'))); ?></h3>
 <div class="docs-file">
 <?php if ( ! isset($vars['contents'])): ?>
 <table class="table">
