@@ -30,8 +30,7 @@ CRUDと認証機能が含まれます。<br>
 composer require sagittar-org/pieni:dev-master
 cp vendor/sagittar-org/pieni/.htaccess .
 cp vendor/sagittar-org/pieni/index.php .
-cp vendor/sagittar-org/pieni/config.php .
-cp vendor/sagittar-org/pieni/.gitignore .
+mysql < vendor/sagittar-org/pieni/misc/pieni.dump 
 </pre>
 <p>
 簡潔なトップページが表示されました。<br>
