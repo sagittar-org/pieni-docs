@@ -27,7 +27,7 @@ CRUDと認証機能が含まれます。<br>
 最小構成のセットアップ例を示します。<br>
 </p>
 <pre>
-composer require sagittar-org/pieni:dev-master
+composer require sagittar-org/pieni:^1.0
 cp vendor/sagittar-org/pieni/.htaccess .
 cp vendor/sagittar-org/pieni/index.php .
 mysql < vendor/sagittar-org/pieni/misc/pieni.dump 
